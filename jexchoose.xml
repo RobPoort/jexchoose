@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+ 
+	<name>Jex Choose</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>juli 2012</creationDate>
+	<author>Rob Poort / Fontijn &amp; Partners</author>
+	<authorEmail>rob@fontijn.nl</authorEmail>
+	<authorUrl>http://www.fontijn.nl</authorUrl>
+	<copyright>Copyright 2012</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<!-- alles beginnend met 0. is ontwikkelversie, 1.x is productieversie -->
+	<version>1.12</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>COM_JEXCHOOSE_DESCRIPTION</description>
+	
+	<!--runs on install/uninstall/update; New since 2.5 -->
+	<scriptfile>script.php</scriptfile>
+ 
+	<install><!-- runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New in 2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update> 
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>jexchoose.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+		<folder>controllers</folder>
+		<folder>language</folder>
+	</files>
+	
+	<media destination="com_jexchoose" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+ 
+	<administration>		
+		<menu img="../media/com_jexchoose/images/jexchoose-16x16.png">COM_JEXCHOOSE</menu>		
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>jexchoose.php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- database en models -->
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>controllers</folder>
+			<!-- view files -->
+			<folder>views</folder>
+			<folder>language</folder>
+			<folder>helpers</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jexchoose.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jexchoose.sys.ini</language>
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_jexchoose.ini</language>
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_jexchoose.sys.ini</language>
+		</languages>
+	</administration>
+ 
+</extension>
