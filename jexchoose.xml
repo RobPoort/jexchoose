@@ -11,7 +11,7 @@
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
 	<!-- alles beginnend met 0. is ontwikkelversie, 1.x is productieversie -->
-	<version>1.12</version>
+	<version>1.12.1</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>COM_JEXCHOOSE_DESCRIPTION</description>
 	
