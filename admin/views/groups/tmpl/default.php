@@ -37,11 +37,11 @@ JHtml::_('behavior.multiselect');
 				<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 			</td>
 			<td>
-			<?php
-				
-					echo $item->title;
-					
+			<a href="index.php?option=com_jexchoose&task=group.edit&id=<?php echo $item->id; ?>">
+			<?php		
+				echo $item->title;					
 			?>
+			</a>
 			</td>
 			<td>
 				<?php echo $item->category; ?>

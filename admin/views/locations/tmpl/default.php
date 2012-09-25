@@ -37,11 +37,11 @@ JHtml::_('behavior.tooltip');
 				<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 			</td>
 			<td>
-			<?php
-				
-					echo $item->name;
-					
+			<a href="index.php?option=com_jexchoose&task=location.edit&id=<?php echo $item->id; ?>">
+			<?php				
+				echo $item->name;				
 			?>
+			</a>
 			</td>			
 			<td>
 				<?php echo $item->title; ?>
